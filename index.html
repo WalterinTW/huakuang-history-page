@@ -16,6 +16,81 @@
     <meta name="robots" content="index, follow">
     
     <link rel="stylesheet" href="style.css">
+
+    <style>
+      .contact-form-section {
+        background-color: #f7f4eb; /* 極淡的宣紙色背景 */
+        padding: 60px 20px;
+        border-top: 1px solid #e6dfd3;
+      }
+      .contact-form-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 35px;
+        background: #fdfaf6; /* 溫暖的白棉紙色 */
+        border: 1px solid #d9ceb6;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(92, 58, 33, 0.05);
+      }
+      .contact-form-container h2 {
+        text-align: center;
+        color: #5c3a21; /* 深木頭色 */
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+      }
+      .contact-form-container .form-subtitle {
+        text-align: center;
+        color: #8c7662;
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        color: #4a3c31;
+        font-weight: bold;
+        font-size: 0.95rem;
+      }
+      .form-group input, 
+      .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #d1c7bd;
+        border-radius: 4px;
+        background-color: #fff;
+        color: #333;
+        font-size: 1rem;
+        box-sizing: border-box;
+        transition: all 0.3s ease;
+      }
+      .form-group input:focus, 
+      .form-group textarea:focus {
+        outline: none;
+        border-color: #b87333; /* 專注時轉為香金/僧袍色 */
+        box-shadow: 0 0 5px rgba(184, 115, 51, 0.2);
+      }
+      .submit-btn {
+        width: 100%;
+        padding: 14px;
+        background-color: #b87333; /* 銅金、僧袍古風色 */
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+      }
+      .submit-btn:hover {
+        background-color: #965a26; /* 深沉的檀木色 */
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -84,7 +159,7 @@
               </article>
               <article>
                 <h3>華人朝聖者的實際需要</h3>
-                <p>當時前往印度聖地的華人僧俗，在當地往往缺乏合適的禮佛、安住與修行空間。也因此，在舍衛城建立一座能夠依漢傳佛教傳統禮佛、掛單與住宿的寺院，成為十分實際而迫切的需要。</p>
+                <p>當時前往印度聖地的華人僧俗，在當地往往缺乏合適的禮佛、安住與修行空間。也體此，在舍衛城建立一座能夠依漢傳佛教傳統禮佛、掛單與住宿的寺院，成為十分實際而迫切的需要。</p>
               </article>
               <article>
                 <h3>海外華僑與佛教護持力量</h3>
@@ -227,6 +302,35 @@
           <p class="lead">
             華光寺的歷史，既是一位法師遠赴佛陀聖地、發願建寺的生命故事，也是近代中印佛教交流與華人護持力量交會的歷史見證。從發願、建寺、焚毀到重建，這段歷程所展現的，不只是建築的完成，更是一種願心的延續。
           </p>
+        </div>
+      </section>
+
+      <section class="contact-form-section" id="contact">
+        <div class="contact-form-container">
+          <h2>聯絡華光寺</h2>
+          <p class="form-subtitle">若您有各項弘法建議，歡迎留言與我們聯絡。</p>
+          
+          <form action="https://formsubmit.co/trynwli@gmail.com" method="POST">
+            <input type="hidden" name="_next" value="https://macbsdme.xyz">
+            <input type="hidden" name="_captcha" value="false">
+
+            <div class="form-group">
+              <label for="name">大德姓名 / 稱呼</label>
+              <input type="text" id="name" name="姓名" required placeholder="請輸入您的姓名或稱呼">
+            </div>
+
+            <div class="form-group">
+              <label for="email">電子信箱（供寺方回信說明）</label>
+              <input type="email" id="email" name="信箱" required placeholder="example@gmail.com">
+            </div>
+
+            <div class="form-group">
+              <label for="message">留言內容</label>
+              <textarea id="message" name="留言內容" rows="5" required placeholder="請在此輸入您想向寺方詢問或說的話..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">阿彌陀佛．送出留言</button>
+          </form>
         </div>
       </section>
     </main>
